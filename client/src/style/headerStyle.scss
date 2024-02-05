@@ -1,0 +1,25 @@
+@mixin headerFlex {
+  display: flex;
+  text-align: center;
+  gap: 4vw;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  &__list {
+    @include headerFlex();
+  }
+  &__itemList p:hover {
+    border-bottom: 0.2vw solid black;
+  }
+  &__itemList p {
+    font-size: 2vw;
+  }
+}
+@media screen and (max-width: 425px) {
+  .headerBox {
+    display: none;
+  }
+}
